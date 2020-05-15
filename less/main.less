@@ -1,0 +1,42 @@
+body {
+  .flex-mixin(center,center,column);
+}
+.title-container {
+  .flex-mixin(center,center,column);
+  background: url("../assets/home.png");
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  height: 95vh;
+  color: white;
+  h1 {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 4rem;
+  }
+  button {
+    margin-top: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    width: 9rem;
+    height: 2rem;
+  }
+}
+.artists-container {
+  width: 100%;
+  border: 1px solid black;
+  .flex-mixin(space-evenly,space-evenly,row);
+  .artist {
+    border: 1px solid black;
+    width: 30%;
+    .flex-mixin(center,flex-start,column);
+    img {
+      border-radius: 0.3rem;
+      width: 20rem;
+      margin-bottom: 1.5rem;
+    }
+    a {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
