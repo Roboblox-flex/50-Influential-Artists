@@ -251,10 +251,11 @@ console.log(artists[8].name);
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
  */
-function getArtistByIndex(id, name) {
+function getArtistByIndex(arr, index) {
+  return `The artist at index ${arr[index].id} is ${arr[index].name}.`;
   /* code here */
 }
-
+console.log(getArtistByIndex(artists, 8));
 /**
 
 
@@ -266,32 +267,52 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-  /* code here */
+function removeArtist(arr, index) {
+  arr.splice(index, 1);
+  return ` The artist at index ${index} has been removed. Thank you for choosing Umbrella Corporation.`;
 }
 
+console.log(removeArtist(artists, 8));
+console.log(artists[8].name);
+console.log(artists);
 /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */) {
-  /* Code here */
+function lotsOfArt(arr) {
+  painting = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (artists[i].paintings > 100) {
+      painting.push(arr[i].name);
+    }
+  }
+  return painting;
 }
+console.log(lotsOfArt(artists));
+/* Task 6: Create a function called `addArtist` that can accept an object and add it to the artists array. Then, Add a 21st century artist to the array (you) with custom information! 👩‍🎨👨‍🎨*/
 
-/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
+// id: 21
+// name: Your Name Here,
+// years: Your Birth Year - current day,
+// genre: Web Design,
+// nationality: Your Nationality Here
+// bio: Add 1-2 sentences (or use lorem ipsum)
 
-id: 21
-name: Your Name Here, 
-years: Your Birth Year - current day,
-genre: Web Design, 
-nationality: Your Nationality Here
-bio: Add 1-2 sentences (or use lorem ipsum) "*/
-
-function addArtist(/* Code here */) {
-  /* Code here */
+function addArtist(arr, artist) {
+  arr.push(artist);
+  return arr;
 }
-
+console.log(
+  addArtist(artists, {
+    id: 21,
+    name: "Johnny Schuler",
+    years: "1975-infinity",
+    genre: "Web Design",
+    nationality: "USA",
+    bio: "lorem ipsum",
+  })
+);
 // 🎨🎨 STRETCH 🎨🎨//
 
 /* STRETCH 1: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
