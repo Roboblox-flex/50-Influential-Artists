@@ -118,20 +118,32 @@ body {
   color: white;
 }
 .title-container h1 {
-  border: 1px solid black;
   text-align: center;
   font-size: 4rem;
 }
+@media (max-width: 500px) {
+  .title-container h1 {
+    font-size: 3rem;
+  }
+}
 .title-container button {
   margin-top: 0.5rem;
-  border: 1px solid black;
   border-radius: 0.2rem;
   width: 9rem;
   height: 2rem;
 }
+@media (max-width: 500px) {
+  .title-container {
+    margin-top: 2rem;
+    height: 60vh;
+    margin-bottom: 2rem;
+  }
+}
+.title-container:hover {
+  opacity: 80%;
+}
 .artists-container {
   width: 100%;
-  border: 1px solid black;
   display: flex;
   align-items: space-evenly;
   justify-content: space-evenly;
@@ -147,9 +159,31 @@ body {
 }
 .artists-container .artist img {
   border-radius: 0.3rem;
-  width: 20rem;
+  width: 80%;
   margin-bottom: 1.5rem;
 }
+.artists-container .artist img:hover {
+  opacity: 80%;
+}
 .artists-container .artist a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
+}
+@media (max-width: 500px) {
+  .artists-container .artist .bio {
+    margin-bottom: 2rem;
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .artists-container .artist {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .artists-container {
+    flex-direction: column;
+  }
 }
