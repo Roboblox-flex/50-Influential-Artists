@@ -1,0 +1,17 @@
+.flex-mixin (@align, @justify, @flex-direction) {
+  display: flex;
+  align-items: @align;
+  justify-content: @justify;
+  flex-direction: @flex-direction;
+}
+.a-mixin() {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+.btn-mixin(@width, @height) {
+  margin-top: 0.5rem;
+  border-radius: 0.2rem;
+  width: @width;
+  height: @height;
+}

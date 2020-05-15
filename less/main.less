@@ -1,0 +1,66 @@
+body {
+  .flex-mixin(center,center,column);
+}
+.title-container {
+  .flex-mixin(center,center,column);
+  background: url("../assets/home.png");
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  height: 95vh;
+  color: white;
+  h1 {
+    text-align: center;
+    font-size: 4rem;
+    @media (max-width: 500px) {
+      font-size: 3rem;
+    } // end of @media
+  } //end of h1
+  button {
+    .btn-mixin(9rem, 2rem);
+  } // end of button
+  @media (max-width: 500px) {
+    margin-top: 2rem;
+    height: 60vh;
+    margin-bottom: 2rem;
+  } // end of @media
+  &:hover {
+    opacity: 80%;
+  } // end of hover
+}
+.artists-container {
+  width: 100%;
+  .flex-mixin(space-evenly,space-evenly,row);
+  .artist {
+    border: 1px solid black;
+    width: 30%;
+    .flex-mixin(center,flex-start,column);
+    img {
+      border-radius: 0.3rem;
+      width: 80%;
+      margin-bottom: 1.5rem;
+      &:hover {
+        opacity: 80%;
+      } // end of hover
+    } // end of img
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    } // end of a
+    .bio {
+      @media (max-width: 500px) {
+        margin-bottom: 2rem;
+        width: 80%;
+      } // end of @media
+    }
+
+    @media (max-width: 500px) {
+      width: 100%;
+    } // end of @media
+  } // end of artist
+  @media (max-width: 500px) {
+    flex-direction: column;
+  } // end of @media
+} // end of artist-container
