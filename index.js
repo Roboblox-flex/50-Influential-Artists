@@ -290,15 +290,19 @@ function lotsOfArt(arr) {
   return painting;
 }
 console.log(lotsOfArt(artists));
-/* Task 6: Create a function called `addArtist` that can accept an object and add it to the artists array. Then, Add a 21st century artist to the array (you) with custom information! 👩‍🎨👨‍🎨*/
+/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
-// id: 21
-// name: Your Name Here,
-// years: Your Birth Year - current day,
-// genre: Web Design,
-// nationality: Your Nationality Here
-// bio: Add 1-2 sentences (or use lorem ipsum)
+id: 21
+name: Your Name Here, 
+years: Your Birth Year - current day,
+genre: Web Design, 
+nationality: Your Nationality Here
+bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
+function addArtist(arr, artist) {
+  arr.push(artist);
+  return arr.name;
+}
 function addArtist(arr, artist) {
   arr.push(artist);
   return arr;
@@ -313,6 +317,19 @@ console.log(
     bio: "lorem ipsum",
   })
 );
+// console.log(
+//   addArtist(artists, [
+//     {
+//       id: 21,
+//       name: "Johnny Schuler",
+//       years: "1975-infinity",
+//       genre: "Web Design",
+//       nationality: "USA",
+//       bio: "lorem ipsum",
+//     },
+//   ])
+// );
+
 // 🎨🎨 STRETCH 🎨🎨//
 
 /* STRETCH 1: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
